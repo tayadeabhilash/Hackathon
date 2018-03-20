@@ -1,0 +1,260 @@
+
+<head>
+  <title="verification"></title>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<!-- getmdl -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="your_path_to/material-design-lite/material.min.css">
+<script defer src="your_path_to/material-design-lite/material.min.js"></script>
+<!--getmdl-select-->
+<link rel="stylesheet" href="path_to/getmdl-select/getmdl-select.min.css">
+<script defer src="path_to/getmdl-select/getmdl-select.min.js"></script>
+</head>
+
+
+
+<style>
+.demo-card-square.mdl-card {
+  width: 30%;
+  height: 80%;
+  position: absolute;
+  margin-left: 35%;
+  padding: 5%;
+  top: 5%;
+
+}
+.demo-card-square > .mdl-card__title {
+  color:  #00004d;
+
+  <!-- background: -->
+    <!--url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC; -->
+}
+
+
+
+</style>
+ <script type="text/javascript">
+function idType(val){
+ var userId=document.getElementById('uId');
+ var agency=document.getElementById('agencyId');
+
+ if(val=='gov')
+ {
+   userId.removeAttribute("disabled");
+   agency.setAttribute("disabled","disabled");
+  }
+ else
+ {
+   agency.removeAttribute("disabled");
+   userId.setAttribute("disabled","disabled");
+
+ }
+
+}
+</script>
+
+<body style="background-color:#e6ffff">
+
+
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+    <header class="mdl-layout__header" style="background-color:#132639">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Hackathon</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content"><!-- Your content goes here -->
+
+
+        <!-- Square card -->
+
+
+        <div class="demo-card-square mdl-card mdl-shadow--2dp" margin-top:'30%' style="overflow: scroll;">
+
+          <div class="mdl-card__title">
+             <h2 class="mdl-card__title-text" >Information</h2>
+
+           </div>
+          <!-- Textfield with Floating Label -->
+
+          <form action="send-password.php" method="post" id="rform">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="name" required style="">
+              <label class="mdl-textfield__label" for="name" color:'#808080' >Name</label>
+            </div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="email" id="email" required style="">
+              <label class="mdl-textfield__label" for="email" color:'#808080' >Email</label>
+            </div>
+            <!-- Numeric Textfield with Floating Label -->
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age">
+      <label class="mdl-textfield__label" for="age">Age</label>
+      <span class="mdl-textfield__error">Input is not a number!</span>
+    </div>
+
+
+
+
+  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="male">
+    <input type="radio" id="male" class="mdl-radio__button" name="gen" value="1" checked>
+    <span class="mdl-radio__label">Male</span>
+  </label>
+  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="female">
+    <input type="radio" id="female" class="mdl-radio__button" name="gen" value="">
+    <span class="mdl-radio__label">Female</span>
+  </label>
+
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="mbno">
+      <label class="mdl-textfield__label" for="mbno" >Mobile no...</label>
+      <span class="mdl-textfield__error">Input is not a number!</span>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+      <input class="mdl-textfield__input" type="text" id="location" required style="">
+      <label class="mdl-textfield__label" for="location" color:'#808080' >Location</label>
+    </div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"   >
+      <input class="mdl-textfield__input" type="text" id="password" name="password" style="display: none">
+          
+           
+         </div>
+
+        <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  value="Register" >
+
+        </form>
+
+      </div>
+    </div>
+
+
+ <Button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  onclick="logout()" >Logout</Button>
+  </main>
+      </body>
+          <!-- Accent-colored raised button with ripple -->
+          <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  >
+          SignUp
+        </button>-->
+
+
+
+
+
+
+
+        
+<script type="text/javascript">
+  //Random password generator
+  function randomPassword(length) {
+    var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+    var pass = "";
+    for (var x = 0; x < length; x++) {
+        var i = Math.floor(Math.random() * chars.length);
+        pass += chars.charAt(i);
+    }
+    return pass;
+}
+function generate() {
+    rform.password.value = randomPassword(10);
+  }
+//end random pass
+generate();
+
+	 // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB6Tj0G0Wf5bKG1DwI9aCb2k7GBzETN9Uk",
+    authDomain: "hackathon-f9256.firebaseapp.com",
+    databaseURL: "https://hackathon-f9256.firebaseio.com",
+    projectId: "hackathon-f9256",
+    storageBucket: "hackathon-f9256.appspot.com",
+    messagingSenderId: "983679682083"
+  };
+  firebase.initializeApp(config);
+
+var regdataRef = firebase.database().ref('regdata');
+
+
+
+	document.getElementById('rform').addEventListener('submit',submitForm);
+
+	function submitForm(e){
+		e.preventDefault();
+
+
+var name=getInputVal('name');
+var email=getInputVal('email');
+var age=getInputVal('age');
+var male=getInputVal('male');
+var female=getInputVal('female');
+var mbno=getInputVal('mbno');
+var location=getInputVal('location');
+
+savedata(name,email,age,male,female,mbno,location);
+
+alert("Saved");
+
+window.location.href="send-password.php";
+	}
+
+
+function getInputVal(id){
+	return document.getElementById(id).value;
+}
+
+
+function savedata(name,email,age,male,female,mbno,location){
+
+	var newRegdataRef = regdataRef.push();
+	newRegdataRef.set({
+		name:name,
+    email:email,
+		age:age,
+		male:male,
+		female:female,
+		mbno:mbno,
+		location:location
+	});
+}
+
+
+
+function logout(){
+  firebase.auth().signOut().then(function() {
+   window.alert('Sign-out successful.');
+   window.location='login.html';
+}).catch(function(error) {
+   window.alert('Error : ' + errorMessage);
+});
+}
+
+</script>
+
+

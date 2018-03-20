@@ -1,0 +1,261 @@
+ <!DOCTYPE html>
+<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type="text/css" href="dashboard.css">
+				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+				<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+				  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" /> 
+				<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+				<script src="https://unpkg.com/sweetalert2@7.15.1/dist/sweetalert2.all.js"></script>
+				<script>
+					function putRange(){
+						swal({
+						  title: 'How many queries to load?',
+						  type: 'question',
+						  input: 'range',
+						  inputAttributes: {
+							min: 30,
+							max: 100,
+							step: 5
+						  },
+						  inputValue: 30
+						});
+						
+					}
+					function logOut(){
+						swal({
+						  title: 'Are you sure?',
+						  text: "Are you sure you want to LogOut???",
+						  type: 'warning',
+						  showCancelButton: true,
+						  confirmButtonColor: '#3085d6',
+						  cancelButtonColor: '#d33',
+						  confirmButtonText: 'Yes!'
+						});
+					}
+				</script>
+		</head>
+
+		<body>
+				
+				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  					<header class="mdl-layout__header">
+    					<div class="mdl-layout__header-row">
+      						<!-- Title -->
+      						<span class="mdl-layout-title">Soil Erosion Management<span>
+      						
+    					</div>
+    					<!-- Tabs -->
+    					<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+    						<a href="#scroll-tab-1" class="mdl-layout__tab is-active">Dashboard</a>
+    						<div class="mdl-layout-spacer"></div>
+      						<a href="#scroll-tab-2" class="mdl-layout__tab">Actions</a>
+      						<a href="#scroll-tab-3" class="mdl-layout__tab">Archieved</a>
+      						<a href="#scroll-tab-4" class="mdl-layout__tab">Analytics</a>
+      						<button style="background: rgb(103,58,183);" onclick="logOut()" class="mdl-layout__tab">Logout</button>
+    					</div>
+				  </header>
+				  		<main class="mdl-layout__content">
+						<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+						  <div class="page-content"><!-- Your content goes here -->
+						  <div class="range-and-LogOut" style="margin-top:15px">
+						  <p style="display:inline-block; margin-left:20px; margin-right:20px;">Number of queries loaded: </p>
+						  <button onclick="putRange();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: rgb(103,58,183);">Select</button>
+						  </div>
+
+						  <div class="timeline">
+								  <div class="container left">
+								    <div class="content">
+								      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+											  <div class="mdl-card__title mdl-card--expand">
+											    <h2 class="mdl-card__title-text">Images</h2>
+											  </div>
+											  <div class="mdl-card__supporting-text">
+											    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											    Aenan convallis.
+											  </div>
+											  <div class="mdl-card__actions mdl-card--border">
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Rate Severity
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Archive
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="document.getElementById('id01').style.display='block'">
+											      View Location
+											    </button>
+											  </div>
+											</div>
+								    </div>
+								  </div>
+								  <div class="container right">
+								    <div class="content">
+								      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+											  <div class="mdl-card__title mdl-card--expand">
+											    <h2 class="mdl-card__title-text">Images</h2>
+											  </div>
+											  <div class="mdl-card__supporting-text">
+											    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											    Aenan convallis.
+											  </div>
+											  <div class="mdl-card__actions mdl-card--border">
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Rate Severity
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Archive
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View Location
+											    </button>
+											  </div>
+											</div>
+								    </div>
+								  </div>
+								  <div class="container left">
+								    <div class="content">
+								      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+											  <div class="mdl-card__title mdl-card--expand">
+											    <h2 class="mdl-card__title-text">Images</h2>
+											  </div>
+											  <div class="mdl-card__supporting-text">
+											    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											    Aenan convallis.
+											  </div>
+											  <div class="mdl-card__actions mdl-card--border">
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Rate Severity
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Archive
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View Location
+											    </button>
+											  </div>
+											</div>
+								    </div>
+								  </div>
+								  <div class="container right">
+								    <div class="content">
+								      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+											  <div class="mdl-card__title mdl-card--expand">
+											    <h2 class="mdl-card__title-text">Images</h2>
+											  </div>
+											  <div class="mdl-card__supporting-text">
+											    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											    Aenan convallis.
+											  </div>
+											  <div class="mdl-card__actions mdl-card--border">
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Rate Severity
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Archive
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View Location
+											    </button>
+											  </div>
+											</div>
+								    </div>
+								  </div>
+								  <div class="container left">
+								    <div class="content">
+								     
+								      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+											  <div class="mdl-card__title mdl-card--expand">
+											    <h2 class="mdl-card__title-text">Images</h2>
+											  </div>
+											  <div class="mdl-card__supporting-text">
+											    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											    Aenan convallis.
+											  </div>
+											  <div class="mdl-card__actions mdl-card--border">
+											  	<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Rate Severity
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      Archive
+											    </button>
+											    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+											      View Location
+											    </button>
+											    
+											  </div>
+											</div>
+								    </div>
+								  </div>
+								  
+						</div>
+
+
+						  </div>
+						</section>
+						<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+						  <div class="page-content">u6y5t4r45y<!-- Your content goes here --></div>
+						</section>
+						<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+						  <div class="page-content">fffffffffffffffffff<!-- Your content goes here --></div>
+						</section>
+						<section class="mdl-layout__tab-panel" id="scroll-tab-4">
+						  <div class="page-content">hhhhhhhhhhhhh<!-- Your content goes here --></div>
+						</section>
+						
+						
+  </main>	
+				 </div>
+
+
+
+	<div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+   <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+      <div class="w3-container">
+          <div id="map" style="width:100%;height:450px;background:yellow"></div>
+      </div>
+     
+    </div>
+  </div>
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 18.517200, lng: 73.815130},
+          zoom: 17
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaCBI0sS7ekD5_9KEY_WoxxtKi96bULUc&callback=initMap"
+    async defer></script>
+    
+		</body>
+</html> 
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

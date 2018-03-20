@@ -1,0 +1,258 @@
+<head>
+  <title="verification"></title>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<!-- getmdl -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="your_path_to/material-design-lite/material.min.css">
+<script defer src="your_path_to/material-design-lite/material.min.js"></script>
+<!--getmdl-select-->
+<link rel="stylesheet" href="path_to/getmdl-select/getmdl-select.min.css">
+<script defer src="path_to/getmdl-select/getmdl-select.min.js"></script>
+</head>
+
+
+
+<style>
+.demo-card-square.mdl-card {
+  width: 30%;
+  height: 400px;
+  position: absolute;
+  margin-left: 35%;
+  padding: 5%;
+  top: 5%;
+
+}
+.demo-card-square > .mdl-card__title {
+  color:  #00004d;
+
+  <!-- background: -->
+    <!--url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC; -->
+}
+
+
+
+</style>
+ <script type="text/javascript">
+function idType(val){
+ var userId=document.getElementById('uId');
+ var agency=document.getElementById('agencyId');
+
+ if(val=='gov')
+ {
+   userId.removeAttribute("disabled");
+   agency.setAttribute("disabled","disabled");
+   
+   document.getElementById('government').style.display="block";
+document.getElementById('private').style.display="none";
+  }
+ else 
+ {
+   agency.removeAttribute("disabled");
+   userId.setAttribute("disabled","disabled");
+document.getElementById('government').style.display="none";
+   document.getElementById('private').style.display="block";
+ }
+ 
+}
+</script>
+
+<body style="background-color:#e6ffff">
+
+
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+    <header class="mdl-layout__header" style="background-color:#132639">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Hackathon</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content"><!-- Your content goes here -->
+
+
+        <!-- Square card -->
+
+
+        <div class="demo-card-square mdl-card mdl-shadow--2dp" margin-top:'30%'>
+
+          <div class="mdl-card__title">
+             <h2 class="mdl-card__title-text" >SignUp</h2>
+
+           </div>
+          <!-- Textfield with Floating Label -->
+
+          <form action="#" method="post" id="vform">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="name" >
+              <label class="mdl-textfield__label" for="name" color:'#808080' >Name</label>
+            </div>
+
+            <!-- Select with floating label and arrow -->
+            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+
+            <select  id="selectValue" class="mdl-textfield__input" id="organization" name="organization" onchange='idType(this.value);' required >
+              <label  for="organization" class="mdl-textfield__label">OrganizationType</label>
+			  
+               <option class="mdl-menu__item" value="">OrganizationType</option>
+               <option class="mdl-menu__item" value="gov">Government</option>
+               <option class="mdl-menu__item" value="prv">Private</option>
+
+            </select>
+
+            </div>
+
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="government" style="display: none" >
+            <input class="mdl-textfield__input" type="text" id="uId"  disabled required >
+            <label class="mdl-textfield__label" for="uId" color:'#808080' >UId:</label>	
+          </div>
+
+		 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="private"  style="display: none"  >
+		  <input class="mdl-textfield__input" type="text" id="agencyId"  disabled required>
+          <label class="mdl-textfield__label" for="agencyId" color:'#808080'  >agency number:</label>
+         </div>
+
+          <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  value="SignUp" >
+           
+        </form>
+
+      </div>
+    </div>
+
+
+
+  </main>
+      </body>
+          <!-- Accent-colored raised button with ripple -->
+          <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  >
+          SignUp
+        </button>-->
+<script type="text/javascript">
+   // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB6Tj0G0Wf5bKG1DwI9aCb2k7GBzETN9Uk",
+    authDomain: "hackathon-f9256.firebaseapp.com",
+    databaseURL: "https://hackathon-f9256.firebaseio.com",
+    projectId: "hackathon-f9256",
+    storageBucket: "hackathon-f9256.appspot.com",
+    messagingSenderId: "983679682083"
+  };
+  firebase.initializeApp(config);
+
+
+
+  document.getElementById('vform').addEventListener('submit',submitForm);
+
+  function submitForm(e)
+  {
+    e.preventDefault();
+    var Uid =  document.getElementById('uId').value;
+    var agencyid =  document.getElementById('agencyId').value;
+
+    if(document.getElementById('selectValue').value == "gov")
+    {
+        var ref = firebase.database().ref('uid'); 
+        ref.on('value',gotData,errData);
+    }
+    else if(document.getElementById('selectValue').value == "prv")
+    {
+      var ref = firebase.database().ref('agencyid'); 
+        ref.on('value',gotDat,errData);
+    }
+  } 
+   function gotData(data)
+   {
+      var Uid =  document.getElementById('uId').value;
+      var name =  document.getElementById('name').value;
+      var flag=0;
+      if(data.val())
+      {
+          var uids = data.val();
+          var keys = Object.keys(uids);
+          for(i=0;i<keys.length;i++)
+          {
+             var k = keys[i];
+              if(keys[i]==Uid)
+              {
+                  if(uids[k].name==name)
+                  {
+                     alert("Found"+uids[k].name);
+                     flag++;
+                     break;
+                   }
+              }
+          
+          }
+          if(!flag)
+            alert("Record does not exist!!");
+
+      }
+      else
+      {
+         window.alert('does not exists');
+      }
+
+  }
+
+
+function gotDat(data)
+   {
+      var Agencyid =  document.getElementById('agencyId').value;
+      var name =  document.getElementById('name').value;
+      var flag=0;
+      if(data.val())
+      {
+          var agencyids = data.val();
+          var keys = Object.keys(agencyids);
+          for(i=0;i<keys.length;i++)
+          {
+             var k = keys[i];
+              if(keys[i]==Agencyid)
+              {
+                  if(agencyids[k].name==name)
+                  {
+                     alert("Found"+agencyids[k].name);
+                     break;
+                     flag++;
+                  }
+              }
+             
+          }
+          if(!flag)
+                alert("Record does not exist!!");
+
+      }
+      else
+      {
+         window.alert('does not exists');
+      }
+
+  }
+
+  function errData(err){
+   console.log(err);
+} 
+</script>
