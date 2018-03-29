@@ -1,8 +1,15 @@
 <head>
   <title="verification"></title>
+<<<<<<< HEAD
+  <meta charset="UTF-8">
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" />
+=======
 <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" /> 
+>>>>>>> origin/master
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <!-- getmdl -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -20,6 +27,17 @@
   function go(){
 
 swal({
+<<<<<<< HEAD
+  title: "Success",
+  text: "Logged In!",
+  icon: "success",
+  timer: 1000,
+  showConfirmButton: false
+},function(){
+  window.location.href="verification.html";
+});
+
+=======
   title: "Good job!",
   text: "Sample Auth Successful!",
   icon: "success",
@@ -29,6 +47,7 @@ swal({
   window.location.href="registration.html";
 });
  
+>>>>>>> origin/master
 
 }
 
@@ -47,7 +66,11 @@ swal({
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
   go();
+<<<<<<< HEAD
+
+=======
    
+>>>>>>> origin/master
   } else {
     // No user is signed in.
   }
@@ -107,18 +130,29 @@ firebase.auth().signInWithEmailAndPassword(user, pass).catch(function(error) {
 
   <!-- Always shows a header, even in smaller screens. -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+<<<<<<< HEAD
+    <header class="mdl-layout__header" style="background-color:#132639">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Ministry Of Water Resources</span>
+=======
     <header class="mdl-layout__header" >
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title">SmartFarming</span>
+>>>>>>> origin/master
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
+<<<<<<< HEAD
+
+=======
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
+>>>>>>> origin/master
         </nav>
       </div>
     </header>
@@ -146,7 +180,11 @@ firebase.auth().signInWithEmailAndPassword(user, pass).catch(function(error) {
            </div>
           <!-- Textfield with Floating Label -->
 
+<<<<<<< HEAD
+
+=======
           
+>>>>>>> origin/master
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
               <input class="mdl-textfield__input" type="text" id="name" required="true">
               <label class="mdl-textfield__label" for="name" color:'#808080' >Username</label>
@@ -159,11 +197,19 @@ firebase.auth().signInWithEmailAndPassword(user, pass).catch(function(error) {
             <label class="mdl-textfield__label" for="uId" color:'#808080' >Password:</label>
           </div>
 
+<<<<<<< HEAD
+          <Button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width:30%; background-color:#2e5cb8;color:'#808080';" onclick="login()" >LogIn</Button>
+
+          <!--<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="login()" value="LogIn" >
+          -->
+
+=======
           <Button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"  onclick="login()" >LogIn</Button>
 
 
 
         
+>>>>>>> origin/master
 
       </div>
     </div>
